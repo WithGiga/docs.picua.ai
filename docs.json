@@ -7,7 +7,11 @@
     "light": "#475569",
     "dark": "#3b82f6"
   },
-  "favicon": "/favicon-2.svg?v=2",
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/black.png",
+    "dark": "/logo/white.png"
+  },
   "navigation": {
     "groups": [
       {
@@ -40,6 +44,11 @@
         ]
       }
     ]
+  },
+  "seo": {
+    "metatags": {
+      "apple-mobile-web-app-title": "PiCUA"
+    }
   },
   "contextual": {
     "options": [
