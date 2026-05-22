@@ -1,0 +1,162 @@
+---
+title: 'MSD Functions (Coming soon)'
+description: 'Manage virtual storage devices with PiCUA'
+icon: 'hard-drive'
+---
+
+
+PiCUA gives AI agents control over virtual storage devices that can be connected to physical computers.
+
+## What is MSD? [illustration]
+
+MSD stands for Mass Storage Device. It's like a virtual USB drive or CD that PiCUA can connect to a computer. This allows AI agents to:
+- Install software from files
+- Boot computers from different operating systems
+- Transfer files to and from computers
+- Mount virtual drives
+
+## Storage Commands
+
+### Upload Files
+Send files to the PiCUA device for later use.
+
+**Command**: `upload file "setup.exe"`
+- Uploads setup.exe to PiCUA storage
+
+**Command**: `upload file "data.csv" --folder "documents"`
+- Uploads file to specific folder
+
+**Command**: `upload url "https://example.com/installer.iso"`
+- Downloads file from internet to PiCUA
+
+### List Files
+See what files are available in PiCUA storage.
+
+**Command**: `list files`
+- Shows all available files
+
+**Command**: `list files --folder "images"`
+- Shows files in specific folder
+
+**Command**: `list files --type iso`
+- Shows only ISO files
+
+## Device Control
+
+### Connect Virtual Drive
+Connect a virtual storage device to the computer.
+
+**Command**: `connect "windows.iso"`
+- Connects Windows ISO as virtual drive
+
+**Command**: `connect "data.zip" --type zip`
+- Connects ZIP file as virtual drive
+
+**Command**: `connect "backup.img" --readonly`
+- Connects as read-only drive
+
+### Disconnect Drive
+Remove virtual drive from computer.
+
+**Command**: `disconnect`
+- Disconnects current virtual drive
+
+**Command**: `disconnect --force`
+- Forces immediate disconnection
+
+### Check Connection Status
+See if virtual drive is currently connected.
+
+**Command**: `status`
+- Shows connection status
+
+**Command**: `status --detailed`
+- Shows detailed connection info
+
+## Real-World Examples
+[illustration]
+
+### Install New Operating System
+```
+upload url "https://ubuntu.com/ubuntu-22.04.iso"
+list files
+connect "ubuntu-22.04.iso"
+wait "Boot Menu" 10000
+press F12
+wait "Boot Options" 5000
+press Down
+press Enter
+wait "Install Ubuntu" 60000
+```
+
+### Software Installation
+```
+upload file "software.exe"
+connect "software.exe"
+wait "Setup Wizard" 15000
+click "Next"
+click "Next"
+click "Install"
+wait "Installation Complete" 120000
+click "Finish"
+disconnect
+```
+
+### File Transfer
+```
+upload file "report.pdf"
+connect "report.pdf"
+wait "File Explorer" 10000
+move 200 150
+click left
+type "report.pdf"
+press Enter
+wait 5000
+disconnect
+```
+
+### System Backup
+```
+connect "backup.img"
+wait "Backup Tool" 10000
+click "Start Backup"
+wait "Backup Complete" 300000
+screenshot --save backup_complete.png
+disconnect
+```
+
+## How It Works
+
+1. **AI Agent** decides what files to use
+2. **PiCUA** uploads or prepares virtual drive
+3. **Hardware** connects virtual drive to computer
+4. **Computer** sees drive as if it's real hardware
+5. **AI Agent** controls the virtual drive
+
+## Why This Matters
+
+- **Virtual Hardware**: Create drives that don't physically exist
+- **Remote Installation**: Install software from anywhere
+- **Multiple Systems**: Use different operating systems
+- **File Management**: Transfer files without network
+- **Boot Options**: Start computers from different sources
+
+## File Types Supported
+
+- **ISO Files**: Operating system installers
+- **IMG Files**: Disk images
+- **ZIP Files**: Compressed archives
+- **Executable Files**: Software installers
+- **Data Files**: Documents, images, videos
+
+## Safety Features
+
+- **Read-Only Mode**: Prevent accidental file changes
+- **Connection Limits**: Only one drive at a time
+- **File Validation**: Check files before connecting
+- **Safe Disconnect**: Ensure proper cleanup
+
+## Next Steps
+- [ATX Power Management](/atx-power)
+- [All Functions](/functions)
+- [Screen Functions](/screen) 

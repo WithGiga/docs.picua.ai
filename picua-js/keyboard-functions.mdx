@@ -1,0 +1,150 @@
+---
+title: 'Keyboard Functions'
+description: 'Control keyboard input with PiCUA'
+icon: 'keyboard'
+---
+
+
+PiCUA gives AI agents full control over keyboard input on physical computers.
+
+## Text Input
+
+### Type Text
+Send text to the computer like a human typing.
+
+**Command**: `type hello`
+- Types "hello" normally
+
+**Command**: `type hello --slow`
+- Types "hello" slowly, character by character
+
+**Command**: `type "Hello World"`
+- Types "Hello World" with spaces
+
+### Press Keys
+Send individual keys to the computer.
+
+**Command**: `Key Enter`
+- Presses the Enter key
+
+**Command**: `Key Tab`
+- Presses the Tab key
+
+**Command**: `Key Escape`
+- Presses the Escape key
+
+**Command**: `Key Backspace`
+- Presses the Backspace key
+
+## Keyboard Shortcuts
+
+### Common Shortcuts
+Send key combinations for quick actions.
+
+**Command**: `shortcut Ctrl+C`
+- Copy selected text
+
+**Command**: `shortcut Ctrl+V`
+- Paste text
+
+**Command**: `shortcut Ctrl+S`
+- Save current file
+
+**Command**: `shortcut Ctrl+A`
+- Select all text
+
+**Command**: `shortcut Alt+F4`
+- Close current window
+
+## Special Keys
+
+### Function Keys
+Access special computer functions.
+
+**Command**: `Key F1`
+- Opens help
+
+**Command**: `Key F5`
+- Refreshes page
+
+**Command**: `Key F12`
+- Opens developer tools
+
+### Navigation Keys
+Move around in text and documents.
+
+**Command**: `Key Home`
+- Go to start of line
+
+**Command**: `Key End`
+- Go to end of line
+
+**Command**: `Key PageUp`
+- Move up one page
+
+**Command**: `Key PageDown`
+- Move down one page
+
+### Arrow Keys
+Move cursor in different directions.
+
+**Command**: `Key Up`
+- Move cursor up
+
+**Command**: `Key Down`
+- Move cursor down
+
+**Command**: `Key Left`
+- Move cursor left
+
+**Command**: `Key Right`
+- Move cursor right
+
+## Real-World Examples
+
+### Login Sequence
+```
+type admin
+Key Tab
+type password123
+Key Enter
+```
+
+### Form Filling
+```
+type "John Doe"
+Key Tab
+type "john@example.com"
+Key Tab
+type "password"
+Key Enter
+```
+
+### Menu Navigation
+```
+Key Alt
+Key F
+Key Down
+Key Down
+Key Enter
+```
+
+## How It Works
+
+1. **AI Agent** decides what text to type
+2. **PiCUA** receives the keyboard command
+3. **Hardware** sends the keystrokes to the computer
+4. **Computer** responds as if a human typed it
+
+## Why This Matters
+
+- **No Human Typing**: AI can fill out forms automatically
+- **Perfect Accuracy**: No typos or mistakes
+- **Fast Operation**: Types much faster than humans
+- **24/7 Availability**: Works anytime, day or night
+- **Consistent Results**: Same input every time
+
+## Next Steps
+- [Mouse Functions](/mouse)
+- [Screen Functions](/screen)
+- [All Functions](/functions) 

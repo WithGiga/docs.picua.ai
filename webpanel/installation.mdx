@@ -1,0 +1,79 @@
+---
+title: 'Installation'
+description: 'Install PiCUA WebPanel'
+icon: 'download'
+---
+
+Get PiCUA WebPanel running on your computer in a few simple steps.
+
+## What is PiCUA WebPanel?
+
+PiCUA WebPanel is a web interface that lets you control physical computers through your browser. It's like having a remote control for any computer, accessible from anywhere.
+
+## Prerequisites
+
+Before installing, make sure you have:
+
+- **Computer**: Windows, Mac, or Linux
+- **Internet**: Connection to download PiCUA
+- **Browser**: Chrome, Firefox, Safari, or Edge
+- **PiKVM Device**: Working PiKVM on your network (optional for testing)
+
+## Installation Methods
+
+
+
+**Step 1**: Install PiCUA
+```bash
+npm install -g picua
+```
+
+**Step 3**: Start the WebPanel
+```bash
+picua start
+```
+
+## First Launch
+
+When you first start PiCUA WebPanel:
+
+1. **Welcome Screen**: You'll see the PiCUA welcome page
+2. **Setup Wizard**: Follow the setup guide
+3. **Configuration**: Enter your PiKVM device details (if you have one)
+4. **Ready**: You're ready to start controlling computers!
+
+## Access Your WebPanel
+
+Once installed, you can access PiCUA WebPanel at:
+
+- **Local Access**: `http://localhost:3000`
+- **Network Access**: `http://[your-computer-ip]:3000`
+
+## Troubleshooting
+
+### PiCUA Won't Start
+- Check if another program is using port 3000
+- Try restarting your computer
+- Make sure you have administrator privileges
+
+### Can't Access WebPanel
+- Check if PiCUA is running
+- Try a different browser
+- Check your firewall settings
+
+### Connection Issues
+- Verify your PiKVM device is working
+- Check network connectivity
+- Ensure PiKVM credentials are correct
+
+## Next Steps
+
+- [Getting Started](/webpanel/getting-started)
+- [UI Walkthrough](/webpanel/ui-walkthrough)
+- [Functions Overview](/functions)
+
+## Need Help?
+
+- **Documentation**: Check other sections of this guide
+- **Community**: Join our Discord server
+- **GitHub**: Report issues or ask questions 

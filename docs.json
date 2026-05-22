@@ -1,0 +1,51 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "willow",
+  "name": "PiCUA",
+  "colors": {
+    "primary": "#0f1b29",
+    "light": "#475569",
+    "dark": "#3b82f6"
+  },
+  "favicon": "/favicon-2.svg?v=2",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Overview",
+        "pages": [
+          "picua-project/introduction",
+          "picua-project/features",
+          "picua-project/master-plan",
+          "picua-project/requirements"
+        ]
+      },
+      {
+        "group": "PiCUA WebPanel",
+        "pages": [
+          "webpanel/getting-started",
+          "webpanel/installation",
+          "webpanel/ui-walkthrough"
+        ]
+      },
+      {
+        "group": "picua.js",
+        "pages": [
+          "picua-js/introduction",
+          "picua-js/core-functions",
+          "picua-js/keyboard-functions",
+          "picua-js/mouse-functions",
+          "picua-js/screen",
+          "picua-js/atx",
+          "picua-js/msd"
+        ]
+      }
+    ]
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "chatgpt",
+      "perplexity"
+    ]
+  }
+}

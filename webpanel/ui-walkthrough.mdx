@@ -1,0 +1,182 @@
+---
+title: 'UI Walkthrough'
+description: 'Understanding the PiCUA WebPanel interface'
+icon: 'eye'
+---
+
+Take a tour of the PiCUA WebPanel interface to understand how everything works.
+
+## Main Interface Layout
+
+The PiCUA WebPanel has a modern, responsive design with two main panels:
+
+![PiCUA WebPanel Interface](/images/picua-mockup.png)
+
+## Header Bar
+
+The top header contains essential information and controls:
+
+### PiCUA Branding
+- **Logo**: PiCUA logo on the left side
+- **Connection Status Badge**: Shows current connection state
+  - **Green**: Connected to PiKVM
+  - **Red**: Not connected
+  - **Yellow**: Connection issues
+
+### User Menu
+- **Profile Button**: Circular button with user icon
+- **Dropdown Menu**: Contains logout option
+- **Session Management**: End current session
+
+## Left Panel - PiKVM Live Stream
+
+The left panel shows the live view of your target computer:
+
+### Live Screen Display
+- **Real-time Stream**: Live view from PiKVM device
+- **Responsive Design**: Automatically adjusts to screen size
+- **Error Handling**: Shows error messages if stream fails
+- **Loading States**: Visual indicators during processing
+
+### Connection Information
+- **Device IP**: Shows connected PiKVM IP address
+- **Status Badge**: Visual connection indicator
+- **Connection Time**: How long you've been connected
+
+### Quick Action Buttons
+Four main action buttons in a grid layout:
+
+1. **Power Button**
+   - Toggles computer power on/off
+   - Changes color based on power state
+   - Green = On, Red = Off
+
+2. **Screenshot Button**
+   - Takes a picture of the current screen
+   - Downloads image automatically
+   - Camera icon for easy identification
+
+3. **Status Button**
+   - Shows current connection status
+   - Displays device information
+   - Activity icon for monitoring
+
+4. **Keymap Button**
+   - Shows available keyboard keys
+   - Helpful for command reference
+   - Grid icon for organization
+
+## Right Panel - Command Line Interface
+
+The right panel provides a full command-line experience:
+
+### Command History
+- **Scrollable Output**: Shows all previous commands and responses
+- **Color-coded Messages**:
+  - **Gray**: Your commands
+  - **White**: System responses
+  - **Red**: Error messages
+- **Timestamps**: Each message shows when it was sent
+- **Rich Formatting**: Help and keymap commands display in organized cards
+
+### Command Input
+- **Text Field**: Type commands in natural language
+- **Auto-completion**: Tab key provides suggestions
+- **Command History**: Arrow keys navigate previous commands
+- **Send Button**: Arrow icon to execute commands
+
+### Smart Suggestions
+- **Command Completion**: Suggests available commands
+- **Key Suggestions**: Shows valid keys for keyboard commands
+- **Shortcut Help**: Assists with key combinations
+- **Context-aware**: Adapts suggestions based on current input
+
+## Key Features
+
+### Command System
+- **Natural Language**: Type commands like "type hello" or "move mouse up"
+- **Built-in Help**: Use "help" command for all available options
+- **Key Reference**: "keymap" command shows valid keyboard keys
+- **Error Handling**: Clear error messages for troubleshooting
+
+### Connection Management
+- **Login Modal**: Secure credential entry
+- **Session Persistence**: Maintains connection across page refreshes
+- **Status Monitoring**: Real-time connection health
+- **Graceful Disconnect**: Safe logout process
+
+### Visual Feedback
+- **Processing Indicators**: Animated borders during command execution
+- **Status Updates**: Real-time feedback on all actions
+- **Error Display**: Clear error messages with suggestions
+- **Success Confirmation**: Positive feedback for completed actions
+
+## Using the Interface
+
+### Basic Workflow
+
+1. **Connect**: Use login command or modal to connect to PiKVM
+2. **View**: See live screen in left panel
+3. **Control**: Use commands in right panel
+4. **Monitor**: Watch results in real-time
+5. **Disconnect**: Use logout when finished
+
+### Command Examples
+
+- **Login**: `login 192.168.1.100 admin password`
+- **Type Text**: `type "Hello World"`
+- **Move Mouse**: `mouse up` or `mouse-move 500 300`
+- **Take Screenshot**: `snapshot`
+- **Check Status**: `status`
+- **Power Control**: `power on` or `power off`
+
+### Navigation Tips
+
+- **Start Simple**: Begin with basic commands like "help" and "status"
+- **Use Tab**: Auto-complete commands and keys
+- **Check History**: Review previous commands and responses
+- **Monitor Stream**: Watch the left panel for visual feedback
+
+## Responsive Design
+
+### Desktop Layout
+- **Side-by-side**: Left panel (stream) and right panel (CLI) side by side
+- **Full Height**: Both panels use full available height
+- **Optimized Spacing**: Comfortable viewing and interaction
+
+### Mobile Layout
+- **Stacked**: Panels stack vertically on smaller screens
+- **Touch-friendly**: Optimized for touch interaction
+- **Adaptive**: Interface adjusts to screen size
+
+## Troubleshooting
+
+### Common Issues
+
+- **Stream Not Loading**: Check PiKVM connection and credentials
+- **Commands Not Working**: Verify connection status
+- **Interface Slow**: Check network connection quality
+- **Login Fails**: Verify IP, username, and password
+
+### Getting Help
+
+- **Built-in Help**: Use "help" command for command reference
+- **Key Reference**: Use "keymap" for valid keyboard keys
+- **Error Messages**: Read error details for troubleshooting
+- **Documentation**: Refer to this guide for detailed information
+
+## Next Steps
+
+- [Functions Overview](/functions)
+- [Installation Guide](/webpanel/installation)
+- [Getting Started](/webpanel/getting-started)
+
+## Practice Makes Perfect
+
+The best way to learn the interface is to:
+
+1. **Start with Help**: Use "help" command to see all options
+2. **Try Basic Commands**: Begin with simple commands like "status"
+3. **Explore Features**: Test different command types
+4. **Monitor Results**: Watch both panels for feedback
+5. **Build Confidence**: Gradually try more complex operations 

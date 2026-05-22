@@ -1,0 +1,126 @@
+---
+title: 'ATX Power Management'
+description: 'Control computer power with PiCUA'
+icon: 'plug'
+---
+
+PiCUA gives AI agents control over computer power - even when the computer is turned off.
+
+## What is ATX Power?
+
+ATX power refers to the standard way computers turn on, off, and restart. PiCUA can control this at the hardware level, which means it works even when the computer's operating system has crashed.
+
+## Power Commands
+
+### Turn Computer On
+Start the computer from a completely powered-off state.
+
+**Command**: `power on`
+- Turns the computer on
+
+**Command**: `power on --wait`
+- Turns computer on and waits for it to start
+
+### Turn Computer Off
+Safely shut down the computer.
+
+**Command**: `power off`
+- Turns the computer off
+
+**Command**: `power off --force`
+- Forces immediate shutdown
+
+### Restart Computer
+Restart the computer without turning it completely off.
+
+**Command**: `power reset`
+- Restarts the computer
+
+**Command**: `power reset --wait`
+- Restarts and waits for boot
+
+### Power Cycle
+Turn off completely, then turn back on.
+
+**Command**: `power cycle`
+- Turns off, waits, then turns on
+
+**Command**: `power cycle --wait`
+- Completes cycle and waits for boot
+
+## Power Status
+
+### Check Power State
+See if the computer is currently on or off.
+
+**Command**: `power status`
+- Shows current power state
+
+**Command**: `power info`
+- Shows detailed power information
+
+## Real-World Examples
+
+### Server Recovery
+```
+power status
+if power is off then
+  power on --wait
+  wait "Login" 30000
+  type admin
+  press Tab
+  type password
+  press Enter
+end
+```
+
+### System Maintenance
+```
+power off
+wait 10000
+power on --wait
+wait "Ready" 60000
+```
+
+### Crash Recovery
+```
+if find "Error" then
+  power reset --wait
+  wait "Welcome" 45000
+end
+```
+
+### Scheduled Restart
+```
+power cycle --wait
+wait "System Ready" 60000
+screenshot --save after_restart.png
+```
+
+## How It Works
+
+1. **AI Agent** decides power action needed
+2. **PiCUA** sends power command to hardware
+3. **Hardware** controls computer's power supply
+4. **Computer** responds to power commands
+5. **AI Agent** monitors power status
+
+## Why This Matters
+
+- **Hardware Level Control**: Works even when computer crashes
+- **Remote Power Management**: Control computers anywhere
+- **Automatic Recovery**: AI can fix crashed systems
+- **Scheduled Operations**: Power on/off at specific times
+- **Emergency Control**: Force shutdown if needed
+
+## Safety Features
+
+- **Confirmation Required**: Critical power actions need approval
+- **Status Monitoring**: Always check power state before acting
+- **Wait Options**: Give computer time to respond
+- **Error Handling**: Safe fallbacks if commands fail
+
+## Next Steps
+- [MSD Functions](/msd)
+- [All Functions](/functions)
+- [Screen Functions](/screen) 

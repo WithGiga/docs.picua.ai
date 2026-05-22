@@ -1,0 +1,147 @@
+---
+title: 'Mouse Functions'
+description: 'Control mouse input with PiCUA'
+icon: 'arrow-pointer'
+---
+
+PiCUA gives AI agents full control over mouse movement and clicks on physical computers.
+
+## Mouse Movement
+
+### Move to Position
+Move the mouse cursor to a specific location on screen.
+
+**Command**: `move 500 300`
+- Moves mouse to position 500 pixels from left, 300 pixels from top
+
+**Command**: `move 960 540`
+- Moves mouse to center of 1920x1080 screen
+
+**Command**: `move 100 100`
+- Moves mouse to top-left area
+
+### Move Relative
+Move the mouse from its current position.
+
+**Command**: `move +100 0`
+- Moves mouse 100 pixels to the right
+
+**Command**: `move 0 +50`
+- Moves mouse 50 pixels down
+
+**Command**: `move -50 0`
+- Moves mouse 50 pixels to the left
+
+**Command**: `move 0 -25`
+- Moves mouse 25 pixels up
+
+## Mouse Clicks
+
+### Single Click
+Click once with different mouse buttons.
+
+**Command**: `click left`
+- Left mouse button click
+
+**Command**: `click right`
+- Right mouse button click
+
+**Command**: `click middle`
+- Middle mouse button click
+
+### Double Click
+Click twice quickly.
+
+**Command**: `double left`
+- Double left click
+
+**Command**: `double right`
+- Double right click
+
+## Mouse Scrolling
+
+### Scroll Wheel
+Scroll up, down, left, or right.
+
+**Command**: `scroll 0 -5`
+- Scroll down 5 units
+
+**Command**: `scroll 0 +5`
+- Scroll up 5 units
+
+**Command**: `scroll +5 0`
+- Scroll right 5 units
+
+**Command**: `scroll -5 0`
+- Scroll left 5 units
+
+## Advanced Mouse Actions
+
+### Drag and Drop
+Click and drag from one point to another.
+
+**Command**: `drag 100 100 200 200 left`
+- Drags from position (100,100) to (200,200) with left button
+
+**Command**: `drag 50 50 300 50 left`
+- Drags horizontally to select text
+
+## Real-World Examples
+
+### Click and Type
+```
+move 200 150
+click left
+type "Hello World"
+```
+
+### Menu Selection
+```
+move 100 50
+click left
+move 100 100
+click left
+```
+
+### File Selection
+```
+move 150 200
+click left
+drag 150 200 400 300 left
+```
+
+### Scroll Through Page
+```
+move 500 800
+scroll 0 -10
+scroll 0 -10
+scroll 0 -10
+```
+
+## How It Works
+
+1. **AI Agent** decides where to move the mouse
+2. **PiCUA** receives the mouse command
+3. **Hardware** moves the mouse to the exact position
+4. **Computer** responds as if a human moved the mouse
+
+## Why This Matters
+
+- **Pixel Perfect**: Moves to exact positions every time
+- **No Fatigue**: Works for hours without getting tired
+- **Fast Movement**: Moves instantly between positions
+- **Precise Control**: Can click on tiny buttons or text
+- **Consistent Results**: Same actions every time
+
+## Screen Coordinates
+
+- **Top-Left**: Position (0, 0)
+- **Top-Right**: Position (1920, 0) on 1920x1080 screen
+- **Bottom-Left**: Position (0, 1080) on 1920x1080 screen
+- **Bottom-Right**: Position (1920, 1080) on 1920x1080 screen
+- **Center**: Position (960, 540) on 1920x1080 screen
+
+## Next Steps
+- [Keyboard Functions](/keyboard)
+- [Screen Functions](/screen)
+- [All Functions](/functions) 
