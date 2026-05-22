@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
+  "theme": "palm",
   "name": "PiCUA",
   "colors": {
     "primary": "#0f1b29",
