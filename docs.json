@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "palm",
+  "theme": "maple",
   "name": "PiCUA",
   "colors": {
-    "primary": "#0f1b29",
-    "light": "#475569",
-    "dark": "#3b82f6"
+    "primary": "#000000",
+    "light": "#ffffff",
+    "dark": "#000000"
   },
   "favicon": "/favicon.svg",
   "logo": {
@@ -17,10 +17,10 @@
       {
         "group": "Overview",
         "pages": [
-          "picua-project/introduction",
-          "picua-project/features",
-          "picua-project/master-plan",
-          "picua-project/requirements"
+          "introduction",
+          "features",
+          "master-plan",
+          "requirements"
         ]
       },
       {
